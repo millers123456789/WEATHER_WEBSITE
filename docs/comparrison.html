@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graphical Comparrison</title>
+    <link rel="stylesheet" href="styles-comparrison.css">
+    <style>
+            * {
+                box-sizing: border-box;
+            }
+            
+            .column {
+                float: left;
+                width: 50.0%;
+                padding: 5px;
+            }
+            
+            /* Clearfix (clear floats) */
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            
+            /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 500px) {
+                .column {
+                    width: 100%;
+                }
+            }
+            </style>
+</head>
+<body>
+    <h1>Visual comparrison of weather vs latitidue</h1>
+    <!-- Deals Header : END -->
+
+    <div class="dropdown"><a href="file:///Users/scottmiller/Desktop/html%20project%20folder/home.html">Home</a>
+        <button onclick="myFunction()" class="dropbtn">Plots</button>
+        <div id="myDropdown" class="dropdown-content">
+                <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/html_hw.html">Temperature</a>
+                <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/humidity_vs_latitude.html">Humidity</a>
+                <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/clouds_vs_Latitude.html">Cloudiness</a>
+                <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/windspeed_vs_latitude.html">Wind speed</a>
+                
+        </div>
+        <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/data.html">Data</a>
+        <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/comparrison.html">Comparrisons</a>
+      </div>
+          <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+                
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtn')) {
+                
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                }
+                </script>
+
+<div class="row">
+        <div class="column">
+          <img src="Temperature_vs_Latitude.jpg" alt="Temperature vs Latitude" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="Humidity_vs_Latitude.jpg" alt="Humidity vs Latitude" style="width:100%">
+        </div>
+        
+      </div>
+    
+      <div class="row">
+            <div class="column">
+                <img src="Cloudiness_vs_Latitude.png" alt="Cloudiness vs Latitude" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="Wind_speed_vs_Latitude.png" alt="Wind Speed vs Latitude" style="width:100%">
+                </div>
+                
+              </div>
+
+</body>
+</html>
