@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visualization page Temperature vs Latitude</title>
+    <link rel="stylesheet" href="styles-comparrison.css">
+</head>
+<body>
+    <div class="dropdown"><a href="home.html">Home</a>
+        <button onclick="myFunction()" class="dropbtn">Plots</button>
+        <div id="myDropdown" class="dropdown-content">
+                <a href="html_hw.html">Temperature</a>
+                <a href="humidity_vs_latitude.html">Humidity</a>
+                <a href="clouds_vs_Latitude.html">Cloudiness</a>
+                <a href="windspeed_vs_latitude.html">Wind speed</a>
+                
+        </div>
+        <a href="data.html">Data</a>
+        <a href="comparrison.html">Comparrisons</a>
+      </div>
+          <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+                
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtn')) {
+                
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                }
+                </script>
+    <!--Header-->
+    <h1>Temperature vs Latitude</h1>
+    <!--Image-->
+<img src = "Temperature_vs_Latitude.jpg" alt="Temperature vs Latitude scatter plot"> <img/>
+<br>
+<p>This is a scatter plot showing temperature as a funciton of latitude. 
+Latitude is defined as the angular distance of a place north or south of the earth's equator, 
+or of a celestial object north or south of the celestial equator, usually expressed in degrees and minutes.
+Looking at the distribution of this plot we can see that the temperatures get higher as the latitude gets closer to zero or 
+the equator.Inversely we can also see that the temperature gets lower as the Latitude gets farther from 0.
+It is coldest farthest away from the equator or at the North and South Poles which is consistent. This scatter plot shows a clearly visible relationship between Latitude or distance from the equator
+and temperature </p>
+ 
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
