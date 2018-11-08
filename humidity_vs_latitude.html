@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visualization page Humidity vs Latitude</title>
+    <link rel="stylesheet" href="styles-comparrison.css">
+</head>
+<body>
+        <div class="dropdown"><a href="file:///Users/scottmiller/Desktop/html%20project%20folder/home.html">Home</a>
+            <button onclick="myFunction()" class="dropbtn">Plots</button>
+            <div id="myDropdown" class="dropdown-content">
+                    <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/html_hw.html">Temperature</a>
+                    <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/humidity_vs_latitude.html">Humidity</a>
+                    <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/clouds_vs_Latitude.html">Cloudiness</a>
+                    <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/windspeed_vs_latitude.html">Wind speed</a>
+                    
+            </div>
+            <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/data.html">Data</a>
+            <a href="file:///Users/scottmiller/Desktop/html%20project%20folder/comparrison.html">Comparrisons</a>
+          </div>
+              <script>
+                    /* When the user clicks on the button, 
+                    toggle between hiding and showing the dropdown content */
+                    function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                    }
+                    
+                    // Close the dropdown if the user clicks outside of it
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropbtn')) {
+                    
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                    </script>
+    <!--Header-->
+    <h1>Humidity vs Latitude</h1>
+    <!--Image-->
+<img src = "Humidity_vs_Latitude.png" alt="Humidity vs Latitude scatter plot"> <img/>
+<br>
+<p>This is a scatter plot showing humidity as a funciton of latitude. 
+Latitude is defined as the angular distance of a place north or south of the earth's equator, 
+or of a celestial object north or south of the celestial equator, usually expressed in degrees and minutes.
+Looking at the distribution of this plot we can see that the densest areas of high % humidity occur
+in the northern hemisphere. While areas of the southern hemisphere experience the same percentage of humidity
+the frequency of these points is much less than in the northern hemisphere. There is a vast amount of speculation 
+that can be made about the reason for this ranging from human involvement since the northern hemisphere is more densily populated
+specifically or simply the environmental terrain is more humid north of the equator </p>
+ 
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
